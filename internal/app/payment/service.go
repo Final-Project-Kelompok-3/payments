@@ -58,6 +58,20 @@ func (s *service) FindByID(ctx context.Context, payload *dto.ByIDRequest) (*mode
 }
 
 func (s *service) Create(ctx context.Context, payload *dto.CreatePaymentRequest) (string, error) {
+
+	// data := retailoutlet.CreateFixedPaymentCodeParams{
+	// 	ExternalID:       "123",
+	// 	RetailOutletName: xendit.RetailOutletNameAlfamart,
+	// 	Name:             "Rika Sutanto",
+	// 	ExpectedAmount:   10000,
+	//   }
+	  
+	//   resp, err := retailoutlet.CreateFixedPaymentCode(&data)
+	//   if err != nil {
+	// 		return "", res.ErrorBuilder(&res.ErrorConstant.InternalServerError, err)
+	//   }
+	  
+	//   fmt.Printf("created retail outlet fixed payment code: %+v\n", resp)
 	
 	var payment = model.Payment{
 		ParticipantID: 	payload.ParticipantID,
